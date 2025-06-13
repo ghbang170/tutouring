@@ -1,0 +1,1056 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>과외신문고 - 믿을 수 있는 1:1 맞춤 과외 매칭 플랫폼</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        .smooth-transition {
+            transition: all 0.3s ease;
+        }
+        .verified-badge {
+            background: linear-gradient(135deg, #10b981, #059669);
+        }
+        .stats-counter {
+            animation: fadeInUp 0.6s ease-in-out;
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .teacher-card:hover {
+            transform: translateY(-5px);
+            transition: all 0.3s ease;
+        }
+        .section-divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #374151, transparent);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <header class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-4">
+                    <div class="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center">
+                        <i class="fas fa-graduation-cap text-white text-xl"></i>
+                    </div>
+                    <div>
+                        <h1 class="text-2xl font-bold text-gray-800">과외신문고</h1>
+                        <p class="text-sm text-gray-600">믿을 수 있는 1:1 맞춤 과외</p>
+                    </div>
+                </div>
+                
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="text-gray-700 hover:text-blue-600 font-medium">홈</a>
+                    <a href="#teachers" class="text-gray-700 hover:text-blue-600 font-medium">선생님 찾기</a>
+                    <a href="#community" class="text-gray-700 hover:text-blue-600 font-medium">커뮤니티</a>
+                    <a href="#consulting" class="text-gray-700 hover:text-blue-600 font-medium">입시컨설팅</a>
+                    <a href="#about" class="text-gray-700 hover:text-blue-600 font-medium">소개</a>
+                </nav>
+                
+                <div class="flex items-center space-x-4">
+                    <button class="bg-blue-600 text-white px-6 py-2 rounded-lg font-medium hover:bg-blue-700 transition-colors">
+                        로그인
+                    </button>
+                    <button class="bg-green-600 text-white px-6 py-2 rounded-lg font-medium hover:bg-green-700 transition-colors">
+                        회원가입
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="bg-gradient-to-r from-yellow-400 to-orange-500 text-center py-3">
+        <div class="container mx-auto px-6">
+            <p class="text-white font-bold">
+                🎉 특별 프로모션! (선생님) 첫 과외비 50% 페이백 + (학부모) 웰컴 기프트 증정 🎁
+                <span class="underline cursor-pointer ml-2">자세히 보기</span>
+            </p>
+        </div>
+    </div>
+
+    <section class="bg-blue-900 py-20 text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-5xl font-bold mb-6">믿을 수 있는 1:1 맞춤 과외</h1>
+            <p class="text-xl mb-8 opacity-90">검증된 선생님과 안전한 매칭, 개인정보 완전보호</p>
+            
+            <!-- Two Target User Paths -->
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto mt-12">
+                <!-- 학부모/학생 섹션 -->
+                <div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-8 text-center hover:bg-opacity-20 smooth-transition">
+                    <i class="fas fa-user-friends text-4xl mb-4"></i>
+                    <h3 class="text-2xl font-bold mb-4">학부모 · 학생</h3>
+                    <p class="mb-6 opacity-90">우리 아이에게 딱 맞는 선생님을 찾고 계신가요?</p>
+                    <div class="space-y-3 text-sm">
+                        <div class="flex items-center justify-center space-x-2">
+                            <i class="fas fa-gift text-yellow-300"></i>
+                            <span>회원가입만 해도 무료 기프트</span>
+                        </div>
+                        <div class="flex items-center justify-center space-x-2">
+                            <i class="fas fa-chalkboard-teacher text-green-300"></i>
+                            <span>3만원으로 시범수업 체험</span>
+                        </div>
+                        <div class="flex items-center justify-center space-x-2">
+                            <i class="fas fa-shield-alt text-blue-300"></i>
+                            <span>검증된 선생님만 매칭</span>
+                        </div>
+                    </div>
+                    <button class="w-full mt-6 bg-yellow-500 hover:bg-yellow-600 text-white py-3 rounded-lg font-semibold smooth-transition">
+                        선생님 찾기
+                    </button>
+                </div>
+
+                <!-- 선생님 섹션 -->
+                <div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-8 text-center hover:bg-opacity-20 smooth-transition">
+                    <i class="fas fa-user-graduate text-4xl mb-4"></i>
+                    <h3 class="text-2xl font-bold mb-4">과외 선생님</h3>
+                    <p class="mb-6 opacity-90">나의 재능을 과외로 전달하고 수익을 올리세요</p>
+                    <div class="space-y-3 text-sm">
+                        <div class="flex items-center justify-center space-x-2">
+                            <i class="fas fa-money-bill-wave text-green-300"></i>
+                            <span>첫 매칭 시 과외비 50% 페이백</span>
+                        </div>
+                        <div class="flex items-center justify-center space-x-2">
+                            <i class="fas fa-user-shield text-blue-300"></i>
+                            <span>개인정보 완전보호</span>
+                        </div>
+                        <div class="flex items-center justify-center space-x-2">
+                            <i class="fas fa-certificate text-purple-300"></i>
+                            <span>인증 시스템으로 신뢰도 UP</span>
+                        </div>
+                    </div>
+                    <button class="w-full mt-6 bg-green-500 hover:bg-green-600 text-white py-3 rounded-lg font-semibold smooth-transition">
+                        선생님 등록
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-white py-16 -mt-10 relative z-10">
+        <div class="container mx-auto px-6">
+            <div class="bg-white rounded-2xl shadow-2xl p-8">
+                <div class="grid md:grid-cols-4 gap-8 text-center">
+                    <div class="stats-counter">
+                        <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-users text-blue-600 text-2xl"></i>
+                        </div>
+                        <h3 class="text-3xl font-bold text-gray-800 mb-2">15,000+</h3>
+                        <p class="text-gray-600">검증된 선생님</p>
+                    </div>
+                    
+                    <div class="stats-counter">
+                        <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-graduation-cap text-green-600 text-2xl"></i>
+                        </div>
+                        <h3 class="text-3xl font-bold text-gray-800 mb-2">98%</h3>
+                        <p class="text-gray-600">매칭 성공률</p>
+                    </div>
+                    
+                    <div class="stats-counter">
+                        <div class="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-trophy text-yellow-600 text-2xl"></i>
+                        </div>
+                        <h3 class="text-3xl font-bold text-gray-800 mb-2">85%</h3>
+                        <p class="text-gray-600">성적 향상률</p>
+                    </div>
+                    
+                    <div class="stats-counter">
+                        <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-heart text-purple-600 text-2xl"></i>
+                        </div>
+                        <h3 class="text-3xl font-bold text-gray-800 mb-2">4.9/5</h3>
+                        <p class="text-gray-600">만족도</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container mx-auto px-6">
+        <div class="text-center mb-12 pt-16">
+            <h2 class="text-4xl font-bold text-gray-800 mb-4">과외 선생님 찾기</h2>
+            <p class="text-xl text-gray-600">원하는 조건에 맞는 완벽한 선생님을 찾아보세요</p>
+        </div>
+
+        <div class="bg-gray-50 rounded-2xl p-8 mb-12">
+            <div class="grid md:grid-cols-6 gap-4">
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-2">과목</label>
+                    <select class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <option>전체</option>
+                        <option>수학</option>
+                        <option>영어</option>
+                        <option>국어</option>
+                        <option>과학</option>
+                        <option>사회</option>
+                        <option>논술</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-2">학년</label>
+                    <select class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <option>전체</option>
+                        <option>초등학생</option>
+                        <option>중학생</option>
+                        <option>고등학생</option>
+                        <option>재수생</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-2">지역</label>
+                    <select class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <option>전체</option>
+                        <option>서울특별시</option>
+                        <option>부산광역시</option>
+                        <option>대구광역시</option>
+                        <option>인천광역시</option>
+                        <option>광주광역시</option>
+                        <option>대전광역시</option>
+                        <option>울산광역시</option>
+                        <option>세종특별자치시</option>
+                        <option>경기도</option>
+                        <option>강원도</option>
+                        <option>충청북도</option>
+                        <option>충청남도</option>
+                        <option>전라북도</option>
+                        <option>전라남도</option>
+                        <option>경상북도</option>
+                        <option>경상남도</option>
+                        <option>제주특별자치도</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-2">수업방식</label>
+                    <select class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <option>전체</option>
+                        <option>대면</option>
+                        <option>비대면</option>
+                        <option>혼합</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-2">수업장소</label>
+                    <select class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <option>전체</option>
+                        <option>선생님집</option>
+                        <option>학부모집</option>
+                        <option>커피숍</option>
+                        <option>스터디카페</option>
+                        <option>기타</option>
+                    </select>
+                </div>
+                <div class="flex items-end">
+                    <button class="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 smooth-transition">
+                        <i class="fas fa-search mr-2"></i>검색
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Teacher Card 1 -->
+            <div class="teacher-card bg-white rounded-xl shadow-lg p-6">
+                <div class="flex items-center mb-4">
+                    <div class="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center mr-4">
+                        <i class="fas fa-user-graduate text-white text-xl"></i>
+                    </div>
+                    <div>
+                        <div class="flex items-center mb-1">
+                            <h3 class="text-xl font-bold text-gray-800 mr-2">김** 선생님</h3>
+                            <span class="verified-badge text-white px-2 py-1 rounded-full text-xs font-bold">
+                                검증완료
+                            </span>
+                        </div>
+                        <p class="text-gray-600">서울대학교 수학교육과</p>
+                    </div>
+                </div>
+                
+                <div class="space-y-3 mb-6">
+                    <div class="flex items-center">
+                        <i class="fas fa-book text-blue-500 mr-3 w-4"></i>
+                        <span class="text-gray-700">수학 전문 (중등/고등)</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-clock text-blue-500 mr-3 w-4"></i>
+                        <span class="text-gray-700">5년 경력</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-map-marker-alt text-blue-500 mr-3 w-4"></i>
+                        <span class="text-gray-700">강남구, 서초구</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-star text-blue-500 mr-3 w-4"></i>
+                        <span class="text-gray-700">리뷰 45개</span>
+                    </div>
+                </div>
+                
+                <div class="flex flex-wrap gap-2 mb-6">
+                    <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">#꼼꼼한설명</span>
+                    <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">#문제풀이중심</span>
+                    <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">#성적향상</span>
+                </div>
+                
+                <div class="flex space-x-3">
+                    <button class="flex-1 bg-blue-600 text-white py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors">
+                        시범수업 신청
+                    </button>
+                    <button class="flex-1 bg-gray-200 text-gray-700 py-3 rounded-lg font-medium hover:bg-gray-300 transition-colors">
+                        프로필 보기
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Teacher Card 2 -->
+            <div class="teacher-card bg-white rounded-xl shadow-lg p-6">
+                <div class="flex items-center mb-4">
+                    <div class="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mr-4">
+                        <i class="fas fa-user-graduate text-white text-xl"></i>
+                    </div>
+                    <div>
+                        <div class="flex items-center mb-1">
+                            <h3 class="text-xl font-bold text-gray-800 mr-2">이** 선생님</h3>
+                            <span class="verified-badge text-white px-2 py-1 rounded-full text-xs font-bold">
+                                검증완료
+                            </span>
+                        </div>
+                        <p class="text-gray-600">연세대학교 영어영문학과</p>
+                    </div>
+                </div>
+                
+                <div class="space-y-3 mb-6">
+                    <div class="flex items-center">
+                        <i class="fas fa-book text-green-500 mr-3 w-4"></i>
+                        <span class="text-gray-700">영어 전문 (초등/중등/고등)</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-clock text-green-500 mr-3 w-4"></i>
+                        <span class="text-gray-700">3년 경력</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-map-marker-alt text-green-500 mr-3 w-4"></i>
+                        <span class="text-gray-700">마포구, 홍대</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-star text-green-500 mr-3 w-4"></i>
+                        <span class="text-gray-700">리뷰 32개</span>
+                    </div>
+                </div>
+                
+                <div class="flex flex-wrap gap-2 mb-6">
+                    <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">#회화중심</span>
+                    <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">#문법정리</span>
+                    <span class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm">#친근한분위기</span>
+                </div>
+                
+                <div class="flex space-x-3">
+                    <button class="flex-1 bg-green-600 text-white py-3 rounded-lg font-medium hover:bg-green-700 transition-colors">
+                        시범수업 신청
+                    </button>
+                    <button class="flex-1 bg-gray-200 text-gray-700 py-3 rounded-lg font-medium hover:bg-gray-300 transition-colors">
+                        프로필 보기
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Teacher Card 3 -->
+            <div class="teacher-card bg-white rounded-xl shadow-lg p-6">
+                <div class="flex items-center mb-4">
+                    <div class="w-16 h-16 bg-purple-500 rounded-full flex items-center justify-center mr-4">
+                        <i class="fas fa-user-graduate text-white text-xl"></i>
+                    </div>
+                    <div>
+                        <div class="flex items-center mb-1">
+                            <h3 class="text-xl font-bold text-gray-800 mr-2">박** 선생님</h3>
+                            <span class="verified-badge text-white px-2 py-1 rounded-full text-xs font-bold">
+                                검증완료
+                            </span>
+                        </div>
+                        <p class="text-gray-600">고려대학교 화학과</p>
+                    </div>
+                </div>
+                
+                <div class="space-y-3 mb-6">
+                    <div class="flex items-center">
+                        <i class="fas fa-book text-purple-500 mr-3 w-4"></i>
+                        <span class="text-gray-700">과학 전문 (중등/고등)</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-clock text-purple-500 mr-3 w-4"></i>
+                        <span class="text-gray-700">7년 경력</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-map-marker-alt text-purple-500 mr-3 w-4"></i>
+                        <span class="text-gray-700">노원구, 강북구</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-star text-purple-500 mr-3 w-4"></i>
+                        <span class="text-gray-700">리뷰 67개</span>
+                    </div>
+                </div>
+                
+                <div class="flex flex-wrap gap-2 mb-6">
+                    <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">#실험중심</span>
+                    <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">#개념정리</span>
+                    <span class="bg-red-100 text-red-800 px-3 py-1 rounded-full text-sm">#입시전문</span>
+                </div>
+                
+                <div class="flex space-x-3">
+                    <button class="flex-1 bg-purple-600 text-white py-3 rounded-lg font-medium hover:bg-purple-700 transition-colors">
+                        시범수업 신청
+                    </button>
+                    <button class="flex-1 bg-gray-200 text-gray-700 py-3 rounded-lg font-medium hover:bg-gray-300 transition-colors">
+                        프로필 보기
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center mt-12">
+            <button class="bg-blue-600 text-white px-8 py-4 rounded-lg font-medium text-lg hover:bg-blue-700 transition-colors">
+                더 많은 선생님 보기
+            </button>
+        </div>
+    </div>
+
+    <section id="community" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">커뮤니티 매칭</h2>
+                <p class="text-xl text-gray-600">학부모와 선생님이 직접 만나는 공간</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Matching Board -->
+                <div class="bg-white rounded-xl shadow-lg p-8">
+                    <div class="flex items-center justify-between mb-6">
+                        <h3 class="text-2xl font-bold text-gray-800">매칭 게시판</h3>
+                        <button class="bg-blue-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-blue-700 transition-colors">
+                            글쓰기
+                        </button>
+                    </div>
+                    
+                    <div class="space-y-4">
+                        <div class="border border-gray-200 rounded-lg p-4 hover:bg-gray-50 cursor-pointer">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-sm font-medium">수학</span>
+                                <span class="text-gray-500 text-sm">2시간 전</span>
+                            </div>
+                            <h4 class="font-bold text-gray-800 mb-2">고3 수학 선생님 구해요 (강남)</h4>
+                            <p class="text-gray-600 text-sm mb-3">수능 대비 미적분 집중 과외 원합니다. 주 2회, 2시간씩...</p>
+                            <div class="flex items-center justify-between">
+                                <div class="flex space-x-2">
+                                    <span class="text-gray-500 text-sm">#강남구</span>
+                                    <span class="text-gray-500 text-sm">#대면</span>
+                                    <span class="text-gray-500 text-sm">#주2회</span>
+                                </div>
+                                <span class="text-blue-600 font-medium">월 80만원</span>
+                            </div>
+                        </div>
+                        
+                        <div class="border border-gray-200 rounded-lg p-4 hover:bg-gray-50 cursor-pointer">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-sm font-medium">영어</span>
+                                <span class="text-gray-500 text-sm">4시간 전</span>
+                            </div>
+                            <h4 class="font-bold text-gray-800 mb-2">중2 영어 과외 학생 모집합니다</h4>
+                            <p class="text-gray-600 text-sm mb-3">영어 전문 강사가 중학생 대상 과외 학생을 모집합니다...</p>
+                            <div class="flex items-center justify-between">
+                                <div class="flex space-x-2">
+                                    <span class="text-gray-500 text-sm">#마포구</span>
+                                    <span class="text-gray-500 text-sm">#비대면가능</span>
+                                    <span class="text-gray-500 text-sm">#주3회</span>
+                                </div>
+                                <span class="text-green-600 font-medium">시급 4만원</span>
+                            </div>
+                        </div>
+                        
+                        <div class="border border-gray-200 rounded-lg p-4 hover:bg-gray-50 cursor-pointer">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="bg-purple-100 text-purple-800 px-2 py-1 rounded text-sm font-medium">과학</span>
+                                <span class="text-gray-500 text-sm">1일 전</span>
+                            </div>
+                            <h4 class="font-bold text-gray-800 mb-2">화학 집중 과외 (고2)</h4>
+                            <p class="text-gray-600 text-sm mb-3">화학2 단원 집중 학습이 필요한 고2 학생입니다...</p>
+                            <div class="flex items-center justify-between">
+                                <div class="flex space-x-2">
+                                    <span class="text-gray-500 text-sm">#서초구</span>
+                                    <span class="text-gray-500 text-sm">#대면</span>
+                                    <span class="text-gray-500 text-sm">#단기</span>
+                                </div>
+                                <span class="text-purple-600 font-medium">월 60만원</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="text-center mt-6">
+                        <button class="text-blue-600 font-medium hover:text-blue-700">더 보기</button>
+                    </div>
+                </div>
+                
+                <!-- Q&A Board -->
+                <div class="bg-white rounded-xl shadow-lg p-8">
+                    <div class="flex items-center justify-between mb-6">
+                        <h3 class="text-2xl font-bold text-gray-800">Q&A 게시판</h3>
+                        <button class="bg-green-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-green-700 transition-colors">
+                            질문하기
+                        </button>
+                    </div>
+                    
+                    <div class="space-y-4">
+                        <div class="border border-gray-200 rounded-lg p-4 hover:bg-gray-50 cursor-pointer">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="bg-yellow-100 text-yellow-800 px-2 py-1 rounded text-sm font-medium">질문</span>
+                                <span class="text-gray-500 text-sm">1시간 전</span>
+                            </div>
+                            <h4 class="font-bold text-gray-800 mb-2">과외 선생님 선택 기준이 뭔가요?</h4>
+                            <p class="text-gray-600 text-sm mb-3">첫 과외라서 어떤 기준으로 선생님을 선택해야 할지...</p>
+                            <div class="flex items-center">
+                                <i class="fas fa-comment text-blue-500 mr-2"></i>
+                                <span class="text-blue-600 font-medium">답변 3개</span>
+                            </div>
+                        </div>
+                        
+                        <div class="border border-gray-200 rounded-lg p-4 hover:bg-gray-50 cursor-pointer">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-sm font-medium">답변완료</span>
+                                <span class="text-gray-500 text-sm">3시간 전</span>
+                            </div>
+                            <h4 class="font-bold text-gray-800 mb-2">시범수업 때 뭘 확인해야 하나요?</h4>
+                            <p class="text-gray-600 text-sm mb-3">3만원 시범수업을 신청했는데 어떤 부분을...</p>
+                            <div class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span class="text-green-600 font-medium">답변 완료</span>
+                            </div>
+                        </div>
+                        
+                        <div class="border border-gray-200 rounded-lg p-4 hover:bg-gray-50 cursor-pointer">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-sm font-medium">입시정보</span>
+                                <span class="text-gray-500 text-sm">1일 전</span>
+                            </div>
+                            <h4 class="font-bold text-gray-800 mb-2">2025년 수능 변화사항 정리</h4>
+                            <p class="text-gray-600 text-sm mb-3">내년 수능에서 바뀌는 부분들을 정리해드립니다...</p>
+                            <div class="flex items-center">
+                                <i class="fas fa-heart text-red-500 mr-2"></i>
+                                <span class="text-red-600 font-medium">좋아요 24개</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="text-center mt-6">
+                        <button class="text-green-600 font-medium hover:text-green-700">더 보기</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="consulting" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">입시 컨설팅 & 학군 정보</h2>
+                <p class="text-xl text-gray-600">전문가와 함께 하는 체계적인 입시 준비</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- 1:1 입시 컨설팅 -->
+                <div class="bg-gradient-to-br from-blue-50 to-indigo-100 rounded-2xl p-8 text-center">
+                    <div class="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-user-tie text-2xl text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">1:1 입시 컨설팅</h3>
+                    <p class="text-gray-600 mb-4">개인 맞춤형 진로 상담과 입시 전략 수립</p>
+                    <ul class="text-sm space-y-2 mb-6">
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>진로 적성 검사</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>학생부 관리 전략</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>대학별 입시 전략</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>자소서 첨삭 지도</li>
+                    </ul>
+                    <button class="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 smooth-transition">
+                        상담 신청하기
+                    </button>
+                </div>
+
+                <!-- 학군 정보 -->
+                <div class="bg-gradient-to-br from-green-50 to-emerald-100 rounded-2xl p-8 text-center">
+                    <div class="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-school text-2xl text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">학군 정보</h3>
+                    <p class="text-gray-600 mb-4">지역별 상세한 교육 환경 정보 제공</p>
+                    <ul class="text-sm space-y-2 mb-6">
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>학교별 입시 실적</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>지역별 교육 특성</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>학원가 정보</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>특수과목 학군 정보</li>
+                    </ul>
+                    <button class="w-full bg-green-600 text-white py-3 rounded-lg hover:bg-green-700 smooth-transition">
+                        정보 확인하기
+                    </button>
+                </div>
+
+                <!-- 학습 자료 허브 -->
+                <div class="bg-gradient-to-br from-purple-50 to-violet-100 rounded-2xl p-8 text-center">
+                    <div class="w-16 h-16 bg-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-book text-2xl text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">학습 자료 허브</h3>
+                    <p class="text-gray-600 mb-4">검증된 고품질 학습 콘텐츠 제공</p>
+                    <ul class="text-sm space-y-2 mb-6">
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>과목별 핵심 자료</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>기출문제 분석</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>동영상 강의</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>학습 플래너</li>
+                    </ul>
+                    <button class="w-full bg-purple-600 text-white py-3 rounded-lg hover:bg-purple-700 smooth-transition">
+                        자료 둘러보기
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">왜 과외신문고를 선택해야 할까요?</h2>
+                <p class="text-xl text-gray-600">안전하고 신뢰할 수 있는 과외 매칭의 새로운 기준</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-white rounded-xl p-8 text-center shadow-lg">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-shield-alt text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">개인정보 완전보호</h3>
+                    <p class="text-gray-600">연락처 비공개로 안전한 매칭 환경을 제공합니다</p>
+                </div>
+                
+                <div class="bg-white rounded-xl p-8 text-center shadow-lg">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-certificate text-green-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">검증된 선생님</h3>
+                    <p class="text-gray-600">학력 인증과 신원 확인을 통한 검증된 선생님만 매칭</p>
+                </div>
+                
+                <div class="bg-white rounded-xl p-8 text-center shadow-lg">
+                    <div class="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-credit-card text-yellow-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">안전한 결제시스템</h3>
+                    <p class="text-gray-600">충전식 가상지갑으로 안전하고 편리한 결제</p>
+                </div>
+                
+                <div class="bg-white rounded-xl p-8 text-center shadow-lg">
+                    <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-handshake text-purple-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">만족보장</h3>
+                    <p class="text-gray-600">시범수업과 100% 환불 보장으로 만족도 극대화</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">이용자 후기</h2>
+                <p class="text-xl text-gray-600">과외신문고를 이용한 학부모와 학생들의 생생한 후기</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-gray-50 rounded-xl p-8">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-user text-white"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800">김○○ 학부모</h4>
+                            <p class="text-gray-600 text-sm">중학교 3학년 자녀</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-4">"개인정보 보호가 정말 잘 되어 있어서 안심이 됩니다. 시범수업을 통해 선생님을 직접 확인할 수 있어서 좋았어요. 우리 아이 성적이 한 달 만에 눈에 띄게 향상되었습니다."</p>
+                    <div class="flex text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-50 rounded-xl p-8">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-user text-white"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800">이○○ 선생님</h4>
+                            <p class="text-gray-600 text-sm">수학 전문 과외</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-4">"매칭 시스템이 정말 잘 되어 있어서 저와 맞는 학생들을 쉽게 찾을 수 있었습니다. 연락처가 보호되어 있어서 불필요한 연락이 없어 좋습니다. 정산 시스템도 투명하고 편리해요."</p>
+                    <div class="flex text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-50 rounded-xl p-8">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-purple-500 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-user text-white"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800">박○○ 학생</h4>
+                            <p class="text-gray-600 text-sm">고등학교 2학년</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-4">"50% 페이백 프로모션 덕분에 부담 없이 시작할 수 있었어요. 선생님이 정말 잘 가르쳐주시고, 웰컴 기프트로 받은 학습 자료도 유용합니다. 성적이 많이 올랐어요!"</p>
+                    <div class="flex text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-gradient-to-r from-yellow-400 via-red-500 to-pink-500">
+        <div class="container mx-auto px-4 text-center text-white">
+            <h2 class="text-4xl font-bold mb-4">🎉 특별 혜택 모음 🎉</h2>
+            <p class="text-xl mb-8">지금 가입하고 놓치지 마세요!</p>
+            
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <div class="bg-white bg-opacity-20 backdrop-blur-sm rounded-2xl p-8">
+                    <h3 class="text-2xl font-bold mb-4">🎁 학부모·학생 웰컴 기프트</h3>
+                    <div class="space-y-3 text-lg">
+                        <div>📚 핀란드식 음성언어 단어장</div>
+                        <div>🗣️ 영어 스피킹 사관학교 예문집</div>
+                        <div>✨ 시범수업 체험권 (3만원)</div>
+                    </div>
+                    <button class="w-full mt-6 bg-yellow-500 hover:bg-yellow-600 text-gray-800 py-3 rounded-lg font-bold smooth-transition">
+                        무료로 받기
+                    </button>
+                </div>
+
+                <div class="bg-white bg-opacity-20 backdrop-blur-sm rounded-2xl p-8">
+                    <h3 class="text-2xl font-bold mb-4">💰 선생님 50% 페이백</h3>
+                    <div class="space-y-3 text-lg">
+                        <div>🎯 첫 매칭 성공 시</div>
+                        <div>💵 과외비의 50% 돌려드림</div>
+                        <div>⚡ 14일 이내 빠른 지급</div>
+                    </div>
+                    <button class="w-full mt-6 bg-green-500 hover:bg-green-600 text-white py-3 rounded-lg font-bold smooth-transition">
+                        선생님 등록하기
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">과외신문고 소개</h2>
+                <p class="text-xl text-gray-600">믿을 수 있는 교육 파트너가 되겠습니다</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h3 class="text-3xl font-bold text-gray-800 mb-6">우리의 미션</h3>
+                    <p class="text-lg text-gray-600 mb-6">
+                        과외신문고는 학생과 학부모, 그리고 선생님 모두가 만족할 수 있는 
+                        안전하고 투명한 교육 플랫폼을 만들어갑니다. 
+                        개인정보 보호와 검증된 매칭 시스템을 통해 
+                        최고의 교육 서비스를 제공하겠습니다.
+                    </p>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <i class="fas fa-lightbulb text-blue-600 mr-4 mt-1"></i>
+                            <div>
+                                <h4 class="font-bold text-gray-800 mb-2">혁신적인 매칭 시스템</h4>
+                                <p class="text-gray-600">AI 기반 맞춤형 선생님 추천</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <i class="fas fa-shield-alt text-blue-600 mr-4 mt-1"></i>
+                            <div>
+                                <h4 class="font-bold text-gray-800 mb-2">완벽한 보안 시스템</h4>
+                                <p class="text-gray-600">개인정보 완전보호와 안전한 거래</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <i class="fas fa-heart text-blue-600 mr-4 mt-1"></i>
+                            <div>
+                                <h4 class="font-bold text-gray-800 mb-2">교육에 대한 열정</h4>
+                                <p class="text-gray-600">모든 학생의 성공을 위한 노력</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-2xl shadow-xl p-8">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6 text-center">과외신문고만의 특별함</h3>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-center p-4 bg-blue-50 rounded-lg">
+                            <div class="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-lock text-white"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800">연락처 비공개</h4>
+                                <p class="text-gray-600 text-sm">플랫폼을 통한 안전한 소통</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center p-4 bg-green-50 rounded-lg">
+                            <div class="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-certificate text-white"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800">엄격한 검증</h4>
+                                <p class="text-gray-600 text-sm">학력 및 신원 인증 완료</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center p-4 bg-yellow-50 rounded-lg">
+                            <div class="w-12 h-12 bg-yellow-500 rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-percentage text-white"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800">50% 페이백 (선생님 한정)</h4>
+                                <p class="text-gray-600 text-sm">첫 과외비 반값 혜택</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center p-4 bg-purple-50 rounded-lg">
+                            <div class="w-12 h-12 bg-purple-500 rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-graduation-cap text-white"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800">종합 교육 서비스</h4>
+                                <p class="text-gray-600 text-sm">매칭부터 입시까지 원스톱</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">왜 과외신문고를 선택해야 할까요?</h2>
+                <p class="text-xl text-gray-600">안전하고 신뢰할 수 있는 과외 매칭의 새로운 기준</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-white rounded-xl p-8 text-center shadow-lg">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-shield-alt text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">개인정보 완전보호</h3>
+                    <p class="text-gray-600">연락처 비공개로 안전한 매칭 환경을 제공합니다</p>
+                </div>
+                
+                <div class="bg-white rounded-xl p-8 text-center shadow-lg">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-certificate text-green-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">검증된 선생님</h3>
+                    <p class="text-gray-600">학력 인증과 신원 확인을 통한 검증된 선생님만 매칭</p>
+                </div>
+                
+                <div class="bg-white rounded-xl p-8 text-center shadow-lg">
+                    <div class="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-credit-card text-yellow-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">안전한 결제시스템</h3>
+                    <p class="text-gray-600">충전식 가상지갑으로 안전하고 편리한 결제</p>
+                </div>
+                
+                <div class="bg-white rounded-xl p-8 text-center shadow-lg">
+                    <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-handshake text-purple-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">만족보장</h3>
+                    <p class="text-gray-600">시범수업과 100% 환불 보장으로 만족도 극대화</p>
+                </div>
+            </div>
+        </div>
+    </section>
+<section class="bg-gradient-to-r from-indigo-600 to-purple-600 py-16 text-white">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <div class="inline-flex items-center bg-white bg-opacity-20 px-4 py-2 rounded-full font-medium mb-6">
+                        <i class="fas fa-guarantee text-yellow-300 mr-2"></i>
+                        100% 만족보장
+                    </div>
+                    
+                    <h2 class="text-4xl font-bold mb-6">
+                        3만 원으로 시작하는<br>
+                        <span class="text-yellow-300">확실한 검증</span>
+                    </h2>
+                    
+                    <p class="text-xl mb-8 opacity-90">
+                        만족하지 않으면 100% 환불해드립니다.<br>
+                        우리 아이에게 정말 맞는 선생님인지 확인해보세요.
+                    </p>
+                    
+                    <div class="space-y-4 mb-8">
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-green-300 mr-4 text-xl"></i>
+                            <span class="text-lg">1:1 맞춤 시범수업 진행</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-green-300 mr-4 text-xl"></i>
+                            <span class="text-lg">학습 스타일 및 성향 파악</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-green-300 mr-4 text-xl"></i>
+                            <span class="text-lg">커리큘럼 맞춤 제안</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-green-300 mr-4 text-xl"></i>
+                            <span class="text-lg">기프트 2종 증정</span>
+                        </div>
+                    </div>
+                    
+                    <button class="bg-yellow-400 text-blue-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-yellow-300 transition-colors">
+                        3만 원 시범수업 신청하기 >
+                    </button>
+                </div>
+                
+                <div class="bg-white bg-opacity-10 rounded-2xl p-8 backdrop-blur-sm">
+                    <h3 class="text-2xl font-bold mb-6 text-center">시범수업 프로세스</h3>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="w-10 h-10 bg-yellow-400 text-blue-900 rounded-full flex items-center justify-center font-bold mr-4 mt-1">
+                                1
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg mb-2">상담 및 매칭</h4>
+                                <p class="opacity-90">학생의 상황과 요구사항을 파악하여 최적의 선생님을 매칭합니다.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-10 h-10 bg-yellow-400 text-blue-900 rounded-full flex items-center justify-center font-bold mr-4 mt-1">
+                                2
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg mb-2">시범수업 진행</h4>
+                                <p class="opacity-90">3만 원으로 실제 수업을 체험하고 선생님과의 케미를 확인합니다.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-10 h-10 bg-yellow-400 text-blue-900 rounded-full flex items-center justify-center font-bold mr-4 mt-1">
+                                3
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg mb-2">정식 수업 결정</h4>
+                                <p class="opacity-90">만족하시면 정식 수업을 시작하고, 불만족시 다른 선생님을 추천해 드립니다.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<div class="fixed bottom-6 right-6 z-50">
+        <button class="promo-glow bg-yellow-400 text-blue-900 w-16 h-16 rounded-full shadow-2xl font-bold text-lg hover:bg-yellow-300 transition-all transform hover:scale-110">
+            <i class="fas fa-phone"></i>
+        </button>
+    </div>
+
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <i class="fas fa-graduation-cap text-2xl text-blue-400"></i>
+                        <span class="text-xl font-bold">과외신문고</span>
+                    </div>
+                    <p class="text-gray-400 mb-4">믿을 수 있는 1:1 맞춤 과외 매칭 플랫폼</p>
+                    <div class="flex space-x-4">
+                        <i class="fab fa-facebook text-blue-400 text-xl cursor-pointer hover:text-blue-300"></i>
+                        <i class="fab fa-instagram text-pink-400 text-xl cursor-pointer hover:text-pink-300"></i>
+                        <i class="fab fa-youtube text-red-400 text-xl cursor-pointer hover:text-red-300"></i>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="font-bold mb-4">서비스</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white smooth-transition">과외 찾기</a></li>
+                        <li><a href="#" class="hover:text-white smooth-transition">선생님 등록</a></li>
+                        <li><a href="#" class="hover:text-white smooth-transition">커뮤니티</a></li>
+                        <li><a href="#" class="hover:text-white smooth-transition">입시 컨설팅</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-bold mb-4">고객지원</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white smooth-transition">자주 묻는 질문</a></li>
+                        <li><a href="#" class="hover:text-white smooth-transition">공지사항</a></li>
+                        <li><a href="#" class="hover:text-white smooth-transition">1:1 문의</a></li>
+                        <li><a href="#" class="hover:text-white smooth-transition">이용가이드</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-bold mb-4">회사정보</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li>㈜ECN교육</li>
+                        <li>서울특별시 강북구 한천로132길 84, 4층</li>
+                        <li>사업자등록번호: 210-81-75897</li>
+                        <li>대표전화: 1533-8536</li>
+                        <li>상담문의: 010-6495-4100</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="section-divider my-8"></div>
+
+            <div class="flex flex-col md:flex-row justify-between items-center text-gray-400 text-sm">
+                <div class="mb-4 md:mb-0">
+                    <span>© ECN교육 All rights reserved.</span>
+                </div>
+                <div class="flex space-x-4">
+                    <a href="#" class="hover:text-white smooth-transition">이용약관</a>
+                    <a href="#" class="hover:text-white smooth-transition">개인정보처리방침</a>
+                    <a href="#" class="hover:text-white smooth-transition">청소년보호정책</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
